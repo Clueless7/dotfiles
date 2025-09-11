@@ -1,0 +1,7 @@
+show=drun
+no_actions=true
+insensitive=true
+allow_images=true
+image_size=40
+term=kitty
+prompt=Search

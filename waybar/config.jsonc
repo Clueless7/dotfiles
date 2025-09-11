@@ -1,0 +1,87 @@
+// -*- mode: jsonc -*-
+{
+    "layer": "bottom", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)
+    // "height": 30, // Waybar height (to be removed for auto height)
+    "spacing": 20, 
+
+    // Choose the order of the modules
+    "modules-left": [
+	    "hyprland/workspaces",
+    ],
+    "modules-center": [
+        "clock",
+    ],
+    "modules-right": [
+        "network#speed",
+        "custom/weather",
+        "tray",
+        "cpu",
+        "memory",
+        "wireplumber",
+    ],
+
+    // Modules configuration
+
+    // Left
+    "hyprland/workspaces": {
+        "format": "{name}",
+    },
+
+    // Center
+    "clock": {
+        "interval": 60,
+        "format": "{:%I:%M %p} 󰥔",
+        "format-alt": "{:%A, %B %d, %Y}",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode": "year",
+            "mode-mon-col": 3,
+            "weeks-pos": "right",
+            "on-scroll": 1,
+            // "format": {
+            //     "months": "<span>{}</span>",
+            //     "days": "<span>{}</span>",
+            //     "weeks": "<span>W{}</span>",
+            //     "weekdays": "<span>{}</span>",
+            //     "today": "<span>{}</span>",
+            // }
+        },
+    },
+
+    // Right
+    "network#speed": {
+        "interface": "enp34s0",
+        "format": "{bandwidthDownBytes}  {bandwidthUpBytes} ",
+        "format-disconnected": "Disconnected",
+        "interval": 1,
+        "max-length": 50,
+        "tooltip": false,
+    },
+    "custom/weather": {
+        "exec": "${HOME}/.config/waybar/scripts/get_weather.sh Muntinglupa+Philippines",
+        "return-type": "json",
+        "format": "{}",
+        "tooltip": true,
+        "interval": 3600
+    },
+    "tray": {
+        "icon-size": 15,
+        "spacing": 10,
+    },
+    "cpu": {
+        "interval": 10,
+        "format": "{usage}% ",
+        "max-length": 10
+    },
+    "memory": {
+        "interval": 10,
+        "format": "{percentage}% ",
+        "max-length": 10,
+    },
+    "wireplumber": {
+        "format": "{volume}% {icon}",
+        "format-muted": "",
+        "format-icons": ["", "", ""],
+    },
+}
