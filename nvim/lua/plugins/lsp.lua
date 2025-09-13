@@ -1,7 +1,6 @@
 return {
   {
     "neovim/nvim-lspconfig",
-
     -- lua setup
     dependencies = {
       "folke/lazydev.nvim",
@@ -12,7 +11,6 @@ return {
         }
       }
     },
-
     config = function()
       -- c
       require("lspconfig").clangd.setup {}

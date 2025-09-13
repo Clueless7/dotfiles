@@ -1,12 +1,12 @@
 return {
-  'saghen/blink.cmp',
-  dependencies = { 'rafamadriz/friendly-snippets' },
-  version = '1.*',
+  "saghen/blink.cmp",
+  dependencies = { "rafamadriz/friendly-snippets" },
+  version = "1.*",
   opts = {
-    -- 'default' (recommended) for mappings similar to built-in completions (C-y to accept)
-    -- 'super-tab' for mappings similar to vscode (tab to accept)
-    -- 'enter' for enter to accept
-    -- 'none' for no mappings
+    -- "default" (recommended) for mappings similar to built-in completions (C-y to accept)
+    -- "super-tab" for mappings similar to vscode (tab to accept)
+    -- "enter" for enter to accept
+    -- "none" for no mappings
     --
     -- All presets have the following mappings:
     -- C-space: Open menu or open docs if already open
@@ -15,10 +15,10 @@ return {
     -- C-k: Toggle signature help (if signature.enabled = true)
     --
     -- See :h blink-cmp-config-keymap for defining your own keymap
-    keymap = { preset = 'super-tab' },
+    keymap = { preset = "super-tab" },
 
     appearance = {
-      nerd_font_variant = 'mono'
+      nerd_font_variant = "mono"
     },
 
     -- (Default) Only show the documentation popup when manually triggered
