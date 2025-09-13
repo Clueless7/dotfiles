@@ -59,7 +59,7 @@
         "tooltip": false,
     },
     "custom/weather": {
-        "exec": "${HOME}/.config/waybar/scripts/get_weather.sh Muntinglupa+Philippines",
+        "exec": "${HOME}/.config/waybar/scripts/get_weather.sh Muntinlupa+Philippines",
         "return-type": "json",
         "format": "{}",
         "tooltip": true,
