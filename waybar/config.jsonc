@@ -14,7 +14,6 @@
     ],
     "modules-right": [
         "network#speed",
-        "custom/weather",
         "tray",
         "cpu",
         "memory",
@@ -57,13 +56,6 @@
         "interval": 1,
         "max-length": 50,
         "tooltip": false,
-    },
-    "custom/weather": {
-        "exec": "${HOME}/.config/waybar/scripts/get_weather.sh Muntinlupa+Philippines",
-        "return-type": "json",
-        "format": "{}",
-        "tooltip": true,
-        "interval": 3600
     },
     "tray": {
         "icon-size": 15,
